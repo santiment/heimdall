@@ -25,6 +25,13 @@ REST server runs in-process with heimdall node.
 To enable REST server edit `app.toml` and enable `api.enable`.
 For serving `swagger`, enable `api.swagger`.
 
+### Run from Dockerfile
+'''bash
+$ docker build -t maticnetwork/heimdall:<tag> .
+$ docker run -it -p 26657:26657 -p 26656:26656 -v ~/.heimdalld:/root/.heimdalld maticnetwork/heimdall:<tag>
+'''
+Latest mainnet tag is `v0.2.1-mainnet`
+
 ### Documentation
 
 Latest docs are [here](https://docs.matic.network/)
